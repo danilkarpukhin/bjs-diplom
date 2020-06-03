@@ -16,8 +16,8 @@ userForm.loginFormCallback = (data) => {
 //Регистрация
 userForm.registerFormCallback = (data) => {
   ApiConnector.register(data, (response) => {
-    if (Object.keys(response).length === 0) {
-      location.reload(true);
+    if (response.success === true) {
+      location.reload();
     } else {
       console.log(response);
       userForm.setRegisterErrorMessage('Такой пользователь существует!');

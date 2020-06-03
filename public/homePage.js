@@ -31,8 +31,8 @@ function exchangeRatesTable() {
 
     });
 };
-
-setInterval(exchangeRatesTable(), 60000);
+exchangeRatesTable();
+setInterval(getStocks, 60000);
 
 //Работа с деньгами
 const money = new MoneyManager();
