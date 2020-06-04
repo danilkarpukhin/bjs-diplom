@@ -32,7 +32,7 @@ function exchangeRatesTable() {
     });
 };
 exchangeRatesTable();
-setInterval(getStocks, 60000);
+setInterval(60000);
 
 //Работа с деньгами
 const money = new MoneyManager();
