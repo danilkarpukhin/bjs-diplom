@@ -21,7 +21,7 @@ ApiConnector.current(response => {
 //Курс валют
 const exchangeRates = new RatesBoard();
 
-function exchangeRatesTable() {
+const exchangeRatesTable = () => {
     ApiConnector.getStocks(response => {
         if (response.success) { 
             exchangeRates.clearTable();
@@ -29,10 +29,10 @@ function exchangeRatesTable() {
             exchangeRates.fillTable(response.data);
         }
 
-    });
+    } );
 };
 exchangeRatesTable();
-setInterval(60000);
+setInterval(exchangeRatesTable, 60000);
 
 //Работа с деньгами
 const money = new MoneyManager();
